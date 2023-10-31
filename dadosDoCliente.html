@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados cadastrais do Cliente</title>
+    <link rel="stylesheet" href="style_Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style_dadosDoCliente.css">
+    
+
+    <script src="script_index.js"></script>
+    <script src="script_dadosDoCliente.js"></script>
+    <script src="script_loading.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+    <script src="script_firebase-init.js"></script>
+
+</head>
+<body>
+    <div class="topnavLogo">
+        <a href="/index.html"><img src="imagem/logo.jpeg" width="100px" alt="LogoEmpresa"></a>
+        <div class="pesquisar-container">
+            <form action="https://www.google.com.br/" target="_blank">
+        <input type="text" placeholder="Procurar..">
+        <button type="submit">
+            <i class="fa fa-search" style="color: blue;"></i>
+        </button>
+        </div>
+        <div class="minha-conta">
+            <a href="acesseSuaConta.html"><b>Minha Conta</b><img loading="lazy" src="imagem/iconeusuario.png"></a>
+            <button type="button" onclick="logout()">Sair</button>
+        </div>
+    </div>
+    </br>
+    
+      
+      <div class="barraNavegacao">
+        <a href="/index.html">Pagina Inicial</a>
+        <a href="#">Chuveiros</a>
+        <a href="#">Fio Eletrico</a>
+        <a href="#">Lampadas</a>
+        <a href="#">Tomadas</a>
+        <a href="#" style="float:right"><img src="imagem/compra.png" width="22px" style="vertical-align: middle;"> <span>Carrinho de compras</span></a>
+      </div>
+
+      <h1>Dados cadastrais do Cliente</h1>
+
+      <form>
+        <fieldset class="pessoal"><legend>Dados pessoais:</legend>
+            <div class="nome">
+                <i class="fa fa-user"></i>
+                <label>Nome</label>
+                <input type="text" id="_nome" placeholder="Nome e sobrenome" required>
+            </div>
+            
+            <div class="cpf">
+                <label>CPF</label>
+                <input type="number" id="_cpf" placeholder="000.000.000-00"maxlength="11">
+            </div>
+
+            <div class="telefone">
+                <i class="fa fa-phone"></i>
+                <label>Telefone</label>
+                <input type="number" id="_telefone" placeholder="(00) 00000-0000">
+            </div>
+        </fieldset>
+
+        <fieldset><legend>Endereço:</legend>
+            <div class="cepEProcuraCEP">
+                <div class="CEP">
+                    <i class='fa fa-location-arrow'></i>
+                    <label>CEP</label>
+                    <input type="number" id="_cep" placeholder="00000-000" maxlength="9">
+                </div>
+
+                <div class="buscaCEP">
+                    <p>Não sabe o seu CEP? <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank">Consulte Aqui</a>.</p>
+                </div>
+                
+            </div>
+
+            <div class="logradouro">
+                <label>Endereço</label>
+                <input type="text" id="_logradouro" placeholder="Avenida, Rua, Travessa..">
+            </div>
+
+            <div class="complementosLogradouro">
+                <div class="numeracao">
+                    <label>Número</label>
+                    <input type="number" id="_numeracao" placeholder="Número">
+                </div>
+
+                <div class="complemento">
+                    <label>Complemento</label>
+                    <input type="text" id="_complemento" placeholder="Ex: ap. 123"> 
+                </div>
+
+                <div class="bairro">
+                    <label>Bairro</label>
+                    <input type="text" id="_bairro" placeholder="Bairro">
+                </div>
+            </div>
+
+            <div class="cidadeEstado">
+                <div class="cidade">
+                    <label>Cidade</label>
+                    <input type="text" id="_cidade" placeholder="Cidade"> 
+                </div>
+
+                <div class="estado">
+                    <label>Estado</label>
+                    <select id="_estado">
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+           </fieldset>
+    </form>
+
+    <button type="button" onclick="carregarInformacoes()">Carregar Informações</button>
+    <button type="button" id="enviarDadosBotão" onclick="salvar()">Enviar dados</button>
+    
+
+    <input type="text" id="_respostaNome">
+
+      
+
+
+</body>

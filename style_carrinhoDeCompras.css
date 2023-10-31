@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+th {
+    display: inline-block;
+	align-items: center;
+    color: brown;
+}
+
+p #sub-total {
+    color: brown;
+}

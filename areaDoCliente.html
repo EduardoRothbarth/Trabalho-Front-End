@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados cadastrais do Cliente</title>
+    <link rel="stylesheet" href="style_Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+
+    <script src="script_index.js"></script>
+    <script src="script_dadosDoCliente.js"></script>
+    <script src="script_loading.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+    <script src="script_firebase-init.js"></script>
+
+</head>
+<body>
+    <div class="topnavLogo">
+        <a href="/index.html"><img src="imagem/logo.jpeg" width="100px" alt="LogoEmpresa"></a>
+        <div class="pesquisar-container">
+            <form action="https://www.google.com.br/" target="_blank">
+        <input type="text" placeholder="Procurar..">
+        <button type="submit">
+            <i class="fa fa-search" style="color: blue;"></i>
+        </button>
+        </div>
+        <div class="minha-conta">
+            <a href="acesseSuaConta.html"><b>Minha Conta</b><img loading="lazy" src="imagem/iconeusuario.png"></a>
+            <button type="button" onclick="logout()">Sair</button>
+        </div>
+    </div>
+    </br>
+    
+      
+      <div class="barraNavegacao">
+        <a href="/index.html">Pagina Inicial</a>
+        <a href="#">Chuveiros</a>
+        <a href="#">Fio Eletrico</a>
+        <a href="#">Lampadas</a>
+        <a href="#">Tomadas</a>
+        <a href="#" style="float:right"><img src="imagem/compra.png" width="22px" style="vertical-align: middle;"> <span>Carrinho de compras</span></a>
+      </div>
+
+      <h1>Sua pagina de informações</h1>
+
+      
+      
+
+</body>

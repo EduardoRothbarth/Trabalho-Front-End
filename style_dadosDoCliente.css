@@ -1,0 +1,36 @@
+
+h1, p, a {
+    text-align: center;
+    color: black;
+}
+
+fieldset{
+    display: flex;
+}
+i{
+    margin-left: 20px;
+}
+label{
+    margin-left: 5px;
+}
+input{
+    padding: 6px 10px;
+}
+
+
+
+#enviarDadosBotão{
+        cursor: pointer;
+        font-family: Open Sans,Helvetica Neue,Arial,Helvetica,sans-serif;
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+        width: 15%;
+        background-color: #0b4d99;
+        color: #fff;
+        margin-top: 10px;
+        font-weight: 700; /*Deixa a letra mais intensa..forte*/
+        border-radius: 5px; /*Arredonda a borda do botão*/
+        float: right;
+}
+

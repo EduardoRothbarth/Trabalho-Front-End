@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="style_Index.css">
+    <link rel="stylesheet" href="style_acesseSuaConta.css">
+    <link rel="stylesheet" href="style_recuperarSenha.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="script_loading.js"></script>
+    <script src="script_validations.js"></script>
+    <script src="script_acesseSuaConta.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+      <script src="script_firebase-init.js"></script>
+
+</head>
+
+<body class="centralize">
+    <div class="topnavLogo">
+        <a href="/index.html"><img src="imagem/logo.jpeg" width="100px" alt="LogoEmpresa"></a>
+        <div class="pesquisar-container">
+            <form action="https://www.google.com.br/" target="_blank">
+        <input type="text" placeholder="Procurar..">
+        <button type="submit">
+            <i class="fa fa-search" style="color: blue;"></i>
+        </button>
+        </div>
+        <div class="minha-conta">
+            <a href="/index.html"><b>Minha Conta</b><img loading="lazy" src="imagem/iconeusuario.png"></a>
+        </div>
+    </div>
+    </br>
+    
+      
+      <div class="barraNavegacao">
+        <a href="/index.html">Pagina Inicial</a>
+        <a href="#">Chuveiros</a>
+        <a href="#">Fio Eletrico</a>
+        <a href="#">Lampadas</a>
+        <a href="#">Tomadas</a>
+        <a href="#" style="float:right"><img src="imagem/compra.png" width="22px" style="vertical-align: middle;"> <span>Carrinho de compras</span></a>
+      </div>
+    
+      <h1>Recuperar Senha</h1>
+
+      <form>
+        <div class="login">
+            <div class="form-field">
+                <div><label>Email</label></div>
+                <i class="fa fa-envelope"></i>
+                <input type="e-mail" name="email" id="email" placeholder="informe seu e-mail" onchange="onChangeEmail()">
+                <div class="error" id="email-required-error">Necessário informar endereço e-mail</div>
+                <div class="error" id="email-invalid-error">Padrão e-mail não reconhecido, verifique e digite novamente</div>
+            </div>
+            <div>
+                <button type="button" id="recover-password-button" onclick="recoverPassword()" disabled="true">Recuperar senha</button>
+            </div>
+        </div>
+      </form>
+      
+</body>

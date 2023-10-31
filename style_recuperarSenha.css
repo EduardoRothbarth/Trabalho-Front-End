@@ -1,0 +1,16 @@
+.bloco{
+    text-align: center;
+}
+
+label{
+    font-weight: 400;
+}
+
+.error {
+    background: red;
+    color: white;
+    display: none;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 10px;
+} 

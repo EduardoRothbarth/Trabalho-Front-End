@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charges</title>
+    <link rel="stylesheet" href="style_Index.css">
+    <link rel="stylesheet" href="style_carrinhoDeCompras.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="script_index.js"></script>
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+    <script src="script_firebase-init.js"></script>
+
+</head>
+
+<body>
+    <div class="topnavLogo">
+        <a href="/index.html"><img src="imagem/logo.jpeg" width="100px" alt="LogoEmpresa"></a>
+        <div class="pesquisar-container">
+            <form action="https://www.google.com.br/" target="_blank">
+        <input type="text" placeholder="Procurar..">
+        <button type="submit">
+            <i class="fa fa-search" style="color: blue;"></i>
+        </button>
+        </div>
+        <div class="minha-conta">
+            <a href="acesseSuaConta.html"><b>Minha Conta</b><img loading="lazy" src="imagem/iconeusuario.png"></a>
+            <button type="button" onclick="logout()">Sair</button>
+        </div>
+    </div>
+    </br>
+    
+      
+      <div class="barraNavegacao">
+        <a href="/index.html">Pagina Inicial</a>
+        <a href="#">Chuveiros</a>
+        <a href="#">Fio Eletrico</a>
+        <a href="#">Lampadas</a>
+        <a href="#">Tomadas</a>
+        <a href="/carrinhoDeCompras.html" style="float:right"><img src="imagem/compra.png" width="22px" style="vertical-align: middle;"> <span>Carrinho de compras</span></a>
+      </div>
+
+
+      <div>
+        <h1>Carrinho de compras</h1>
+        <form>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col" colspan="2">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+			  
+                  </tbody>
+            </table>
+            <p id="sub-total">
+				<strong>Sub Total</strong>: <span id="stotal"></span>
+			</p>
+			<ul id="shopping-cart-actions">
+				<li>
+					<input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
+				</li>
+				<li>
+					<input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
+				</li>
+				<li>
+					<a href="index.html" class="btn">Continue comprando</a>
+				</li>
+				<li>
+					<a href="checkout.html" class="btn">Finalizar compra</a>
+				</li>
+			</ul>
+        </form>
+      </div>
+</body>
