@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="style_Index.css">
+    <link rel="stylesheet" href="style_pedidoDoCliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="topnavLogo">
+        <a href="/index.html"><img src="imagem/logo.jpeg" width="100px" alt="LogoEmpresa"></a>
+        <div class="pesquisar-container">
+            <form action="https://www.google.com.br/" target="_blank">
+        <input type="text" placeholder="Procurar..">
+        <button type="submit">
+            <i class="fa fa-search" style="color: blue;"></i>
+        </button>
+        </div>
+        <div class="minha-conta">
+            <a href="acesseSuaConta.html"><b>Minha Conta</b><img loading="lazy" src="imagem/iconeusuario.png"></a>
+            <button type="button" onclick="logout()">Sair</button>
+        </div>
+    </div>
+    </br>
+    
+      
+      <div class="barraNavegacao">
+        <a href="/index.html">Pagina Inicial</a>
+        <a href="#">Chuveiros</a>
+        <a href="#">Fio Eletrico</a>
+        <a href="#">Lampadas</a>
+        <a href="#">Tomadas</a>
+        <a href="/carrinhoDeCompras.html" style="float:right"><img src="imagem/compra.png" width="22px" style="vertical-align: middle;"> <span>Carrinho de compras</span></a>
+      </div>
+
+      <form>
+        <div class="labelSuperior">
+            <label for="idComprador">Id</label>
+            <input type="number" id="idComprador" readonly class="inputAutoCompleta">
+        </div>  
+        <div class="areaPrecos">
+            <div class="labelSuperior">
+                <div class="labelSuperior">
+                    <label for="nomeComprador">Nome</label>
+                    <input type="text" id="nomeComprador">
+                </div>  
+                <div class="labelSuperior">
+                    <label for="senhaComprador">Senha</label>
+                    <input type="password" id="senhaComprador">
+                </div>  
+            </div>
+            <div class="labelSuperior">
+                <label for="cpfComprador">CPF</label>
+                <input type="number" id="cpfComprador">
+            </div> 
+            <div class="labelSuperior">
+                <label for="emailComprador">Email</label>
+                <input type="text" id="emailComprador">
+            </div>  
+            <div class="labelSuperior">
+                <div class="labelSuperior">
+                    <label for="telefoneComprador">Telefone</label>
+                    <input type="number" id="telefoneComprador">
+                </div>  
+            </div>
+        </div>
+
+        <button type="submit" class="formBtn" onclick="atualizarComprador()">
+            <span>Atualizar dados</span>
+        </button>
+    </form>
+    
+    <div id="containerTable">
+        <table>
+            <tr>
+                <th>Número do Pedido</th>
+                <th>Imagem do Produto</th>
+                <th>Nome do produto</th>
+                <th>Descricao</th>
+                <th>Quantidade</th>
+                <th>Preço Unitário</th>
+                <th>Preço Total</th>
+                <th>Data da entrega</th>
+                <th>Status</th>
+            </tr>
+            <tbody id="corpoTab"></tbody>
+        </table>
+    </div>
+
+    <script src="script_pedidoDoCliente.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        perfilComprador()
+        swalDadosAtualizados() //Função que cria um modal no central da tela, confirmando atualização dos dados
+    </script>
+
+</body>

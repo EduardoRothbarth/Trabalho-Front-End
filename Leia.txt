@@ -1,0 +1,48 @@
+**** PARA VINCULAR ESTE PROJETO AO GIT E DEPOIS AO GITHUB ***
+1 - Abrir o terminal, na pasta principal aonde esta todo o projeto e efetuar o comando: git init
+    Pronto inicializamos o GIT
+
+2 - Efetuar o comando: git status
+    Agora visualizamos todos os arquivos A serem comentados.. A serem enviados ao git
+
+3 - Efetuar o comando: git add .
+    git = GIT; add = adicionar; . = todas as pastas do nosso projeto, 
+se desejassemos apenas 1 pasta em específico, utilizariamos .\"nomeDoArquivo".html ou .css ou .js... 
+
+4 - Efetuamos novamente o comando: git status
+    Para verificarmos se há algum problema
+
+5 - Efetuar comando: git commit -a -m "" (-m "' é opcional)
+    commit = comitar/enviar; -a = estamos informando que será todo tipo de arquivo, existe outras sintaxes
+mas não vi a respeito; -m = adicionar/escrever uma mensagem, serve como referencia para as outras pessoas
+que estão trabalhando em cima do mesmo projeto, dentro das aspas duplas ("") vai o texto, vira uma STRING
+
+6 - Novamente o comando: git status
+    Para verificar se deu algo errado
+
+Aqui acabou a parte do GIT... vamos agora ao GITHUB
+
+1 - Acessar o github, e criar o repositorio com o nome desejado para a aplicação que iremos subir
+    *** ATENÇÃO ***
+Ao criar o repositorio, NÃO adicionar README file, pois dará erro ao subir, crie apenas o diretorio.
+Também não colocar description.. estes dois serão adicionados depois de subrirmos os arquivos.
+Definir se será publico ou privado, e manda criar.
+
+2 - Após criado, na janela haverá informação para primeiros passos, na 3ª opção 
+    (…or push an existing repository from the command line), devemos copiar a primeira linha de instrução
+    e colar no terminal aqui no VS Code, esta mensagem será:
+git remote add origin https://github.com/EduardoRothbarth/??nomedorepositorio??.git
+    A instrução informa que estamos adicionando uma origem remota, uma conexão entre o nosso pc e a pasta
+    no GITHUB.
+
+3 - Colar no terminal do VS Code a segunda instrução:
+    git branch -M main
+Informando que a branch principal foi nomeada de main e parear em ambos os repositórios e será o arquivo
+principal da aplicação, sempre que adicionar algo ao projeto, o main deve estar com a tarefa nova, nela será
+feita a build do projeto que sera colocada na servidor para disponibilizar a aplicação aos usuarios
+
+4 - Colar no terminal do VS Code a terceira instrução:
+    git push -u origin main
+É enviar o código atual para o nosso repositorio remoto (GITHUB)
+
+Aqui acabou a parte do GITHUB, se consultar o repositorio, verificara que lá estarão os arquivos.

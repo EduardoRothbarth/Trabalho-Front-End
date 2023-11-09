@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="style_Index.css">
     <link rel="stylesheet" href="style_carrinhoDeCompras.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="script_index.js"></script>
-    
     
     <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
@@ -79,4 +76,31 @@
 			</ul>
         </form>
       </div>
+
+      <section>
+        <form>
+            <div class="areaPrecos">
+                <div class="labelSuperior">
+                    <label for="id">ID:</label>
+                    <input type="text" id="id">
+                </div>
+                <div class="labelSuperior">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha">
+                </div>
+            </div>
+    
+            <button type="submit" onclick="acessarConta()" class="formBtn">
+                <span>Acessar</span>
+            </button>
+
+            <div class="divAsForm">
+                <a href="EsquecerId.html">Esqueci meu ID</a>
+                <a href="EsquecerSenha.html">Esqueci minha senha</a>
+            </div>
+        </form>
+      </section>
+
+      <script src="script_pedidoDoCliente.js"></script>
+      
 </body>

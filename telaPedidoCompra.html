@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Compra</title>
+    <link rel="stylesheet" href="style_TelaPedidoCompra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+
+           <h1>tools.com</h1>
+
+           <form id="BarraPesquisa">
+              <input type="search" placeholder="O que você esta procurando?" id="textoPesquisa" required>
+              <button type="submit" id="lupaBarraPesquisa">
+                <i class='fa fa-search'></i>
+              </button>
+           </form>
+
+           <button type="submit" id="iconeLogin">
+            <i class='fa fa-user-circle' style='color: white'></i>
+           </button>
+
+           <button type="submit" id="iconeCarrinho">
+            <i class='fa fa-shopping-cart' style='color: white'></i>
+           </button>
+
+        </div>
+      
+        
+        <nav class="barraNavegacao">
+            <a href="#">Cabos</a>
+            <a href="#">Ferramentas</a>
+            <a href="#">Iluminação Emergência</a>
+            <a href="#">Interruptores e tomadas</a>
+            <a href="#">Lâmpadas</a>
+            <a href="#">Louças</a>
+            <a href="#">Outros</a>
+        </nav>
+        
+    </header>
+
+    <main>
+        <form>
+            <div class="labelSuperior">
+                <label for="idComprador">Id</label>
+                <input type="number" id="idComprador" readonly class="inputAutoCompleta">
+            </div>  
+            <div class="areaPrecos">
+                <div class="labelSuperior">
+                    <div class="labelSuperior">
+                        <label for="nomeComprador">Nome</label>
+                        <input type="text" id="nomeComprador">
+                    </div>  
+                    <div class="labelSuperior">
+                        <label for="senhaComprador">Senha</label>
+                        <input type="password" id="senhaComprador">
+                    </div>  
+                </div>
+                <div class="labelSuperior">
+                    <label for="cpfComprador">CPF</label>
+                    <input type="number" id="cpfComprador">
+                </div> 
+                <div class="labelSuperior">
+                    <label for="emailComprador">Email</label>
+                    <input type="text" id="emailComprador">
+                </div>  
+                <div class="labelSuperior">
+                    <div class="labelSuperior">
+                        <label for="telefoneComprador">Telefone</label>
+                        <input type="number" id="telefoneComprador">
+                    </div>  
+                </div>
+            </div>
+    
+            <button type="submit" class="formBtn" onclick="atualizarComprador()">
+                <span>Atualizar dados</span>
+            </button>
+        </form>
+        
+        <div id="containerTable">
+            <table>
+                <tr>
+                    <th>Número do Pedido</th>
+                    <th>Imagem do Produto</th>
+                    <th>Nome do produto</th>
+                    <th>Descricao</th>
+                    <th>Quantidade</th>
+                    <th>Preço Unitário</th>
+                    <th>Preço Total</th>
+                    <th>Data da entrega</th>
+                    <th>Status</th>
+                </tr>
+                <tbody id="corpoTab"></tbody>
+            </table>
+        </div>
+    
+        <script src="script_pedidoDoCliente.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script>
+            perfilComprador()
+            swalDadosAtualizados() //Função que cria um modal no central da tela, confirmando atualização dos dados
+        </script>
+    </main>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "Comprador": [
+    {
+      "id": 987001,
+      "nome": "Vinicius M",
+      "senha": "123",
+      "cpf": "222",
+      "email": "teste@any.com",
+      "telefone": "40028922"
+    },
+    {
+      "id": 987002,
+      "nome": "Marina",
+      "senha": 321,
+      "cpf": 222,
+      "email": "qualquer@gmail.com",
+      "telefone": 40028923
+    },
+    {
+      "id": 987003,
+      "nome": "Julia",
+      "senha": 963,
+      "cpf": 333,
+      "email": "quemsabe@hotmail.com.br",
+      "telefone": 40028924
+    },
+    {
+      "id": 987004,
+      "nome": "Beatriz",
+      "senha": "852",
+      "cpf": "888",
+      "email": "quale@yahoo.com",
+      "telefone": "1140028922"
+    },
+    {
+      "id": 987005,
+      "nome": "Juliana",
+      "senha": "852",
+      "cpf": "852",
+      "email": "nemexiste@outlook.com",
+      "telefone": "40028925"
+    }
+  ],
+  "pedidos": [
+    {
+      "idComprador": "987001",
+      "dataEntrega": "2023-04-22",
+      "idPedido": 125,
+      "status": "entregue",
+      "idProduto": 1,
+      "quantidade": "6",
+      "valorTotal": "3594"
+    },
+    {
+      "idComprador": "987001",
+      "dataEntrega": "2023-04-27",
+      "idPedido": 126,
+      "status": "entregue",
+      "idProduto": 1,
+      "quantidade": "5",
+      "valorTotal": "R$ NaN"
+    },
+    {
+      "idComprador": "987002",
+      "dataEntrega": "2023-04-25",
+      "idPedido": 128,
+      "status": "pendente",
+      "idProduto": 4,
+      "quantidade": "2",
+      "valorTotal": "5758.2"
+    },
+    {
+      "idComprador": "987004",
+      "dataEntrega": "2023-05-06",
+      "idPedido": 130,
+      "status": "entregue",
+      "idProduto": 3,
+      "quantidade": "10",
+      "valorTotal": "17490"
+    },
+    {
+      "idComprador": "987004",
+      "dataEntrega": "2023-05-02",
+      "idPedido": 131,
+      "status": "pendente",
+      "idProduto": 4,
+      "quantidade": "2",
+      "valorTotal": "5758.2"
+    },
+    {
+      "idComprador": "987001",
+      "dataEntrega": "2023-04-22",
+      "idPedido": 132,
+      "status": "pendente",
+      "idProduto": 4,
+      "quantidade": "6",
+      "valorTotal": "17274.6"
+    },
+    {
+      "idComprador": "987005",
+      "dataEntrega": "2023-04-28",
+      "idPedido": 134,
+      "status": "pendente",
+      "idProduto": 4,
+      "quantidade": "6",
+      "valorTotal": "17274.6"
+    },
+    {
+      "idComprador": "987005",
+      "dataEntrega": "2023-04-21",
+      "idPedido": 136,
+      "status": "entregue",
+      "idProduto": 5,
+      "quantidade": "4",
+      "valorTotal": "17456.4"
+    },
+    {
+      "idComprador": "987005",
+      "dataEntrega": "2023-04-19",
+      "idPedido": 137,
+      "status": "pendente",
+      "idProduto": 4,
+      "quantidade": "4",
+      "valorTotal": "11516.4"
+    },
+    {
+      "idComprador": "987005",
+      "dataEntrega": "2023-04-27",
+      "idPedido": 138,
+      "status": "entregue",
+      "idProduto": 1,
+      "quantidade": "4",
+      "valorTotal": "2396"
+    }
+  ]
+}
